@@ -10,7 +10,7 @@ will light up
  
 // these constants won't change:
 const int analogPin = A0;   // the pin that the potentiometer is attached to
-const int ledCount = 10;    // the number of LEDs in the bar graph
+const int ledCount = 13;    // the number of LEDs in the bar graph
 
 int ledPins[] = {
   4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
