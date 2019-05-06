@@ -6,8 +6,8 @@ amount of lights will light up and if we twist the other way a different amount 
 will light up
  */
 
-
- 
+/*
+ //potenciameter code 
 // these constants won't change:
 const int analogPin = A0;   // the pin that the potentiometer is attached to
 const int ledCount = 10;    // the number of LEDs in the bar graph
@@ -42,4 +42,25 @@ void loop() {
       digitalWrite(ledPins[thisLed], LOW);
     }
   }
+
+}
+*/
+//Temperature Converter: color of lights depends on temperature
+float temp;
+int tempPin = 0;
+
+void setup() {
+   Serial.begin(9600);
+}
+
+void loop() {
+   temp = analogRead(tempPin);
+   // read analog volt from sensor and save to variable temp
+   temp = temp * 0.48828125;
+   // convert the analog volt to its temperature equivalent
+   Serial.print("TEMPERATURE = ");
+   Serial.print(temp); // display temperature value
+   Serial.print("*C");
+   Serial.println();
+   delay(1000); // update sensor reading each one second
 }
